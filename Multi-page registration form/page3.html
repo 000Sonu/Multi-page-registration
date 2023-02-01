@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Registration form 3rd page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="submit.html" name="myForm">
+        <div id="form" style="text-align: center;" >
+            Recent passport size photograph (image size less than 4MB)<span class="star">*</span><br>
+            <input type="file" name="PassportPhoto" id="PassportPhoto">
+            <input type="button" value="Upload" onclick="sizeValidationOf4Mb(document.myForm.PassportPhoto)"><br><br>
+            HSC mark sheet (image,PDF or docs size less than 4MB)<span class="star">*</span><br>
+            <input type="file" name="HSCmarkSheet" id="HSCmarkSheet">
+            <input type="button" value="Upload" onclick="sizeValidationOf4Mb(document.myForm.HSCmarkSheet)"><br><br>
+            SSC mark sheet (image,PDF or docs size less than 4MB)<span class="star">*</span><br>
+            <input type="file" name="SSCmarkSheet" id="SSCmarkSheet">
+            <input type="button" value="Upload" onclick="sizeValidationOf4Mb(document.myForm.SSCmarkSheet)"><br><br>
+            All semesters mark sheet in single PDF or docs (file size less than 10MB)<span class="star">*</span><br>
+            <input type="file" name="AllSemestersMarkSheet" id="AllSemestersMarkSheet">
+            <input type="button" value="Upload" onclick="sizeValidationOf10Mb(document.myForm.AllSemestersMarkSheet)"><br><br>
+            <div id="buttons">
+                <input type="button" value="Previous" onclick="goToPage2()">
+                <input type="submit" value="Submit" onclick="submitted()">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Registration form 2nd page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form method="post" name="myForm" action="">
+        <div id="form">
+            <div>
+                HSC Institute name<span class="star">*</span><br>
+                <input type="text" name="HIname" id="HIname" class="maxWidth">
+            </div><br>
+            <div>
+                <label for="HSC-Board">HSC Board</label><span class="star">*</span><br>
+                <select name="HSCBoard" id="HSCBoard" class="maxWidth">
+                    <option value="">Select a Board</option>
+                    <option value="CBCS">CBCS</option>
+                    <option value="ICSC">ICSC</option>
+                    <option value="State Board">State Board</option>
+                </select>
+            </div><br>
+            <div>
+                Score in HSC in percentage<span class="star">*</span><br>
+                <input type="number" name="HSCScore" id="HSCScore" class="maxWidth" onfocusout="ValidatePercentage(document.myForm.HSCScore)" >
+            </div><br>
+            <div>
+                SSC Institute name<span class="star">*</span><br>
+                <input type="text" name="SIname" id="SIname" class="maxWidth">
+            </div><br>
+            <div>
+                <label for="SSC-Board">SSC Board</label><span class="star">*</span><br>
+                <select name="SSCBoard" id="SSCBoard" class="maxWidth">
+                    <option value="">Select a Board</option>
+                    <option value="CBCS">CBCS</option>
+                    <option value="ICSC">ICSC</option>
+                    <option value="State Board">State Board</option>
+                </select>
+            </div><br>
+            <div>
+                Score in SSC in percentage<span class="star">*</span><br>
+                <input type="text" name="SSC-Score" id="SSCScore" class="maxWidth" onfocusout="ValidatePercentage(document.myForm.SSCScore)" >
+            </div><br>
+            <div>
+                Currently pursuing<span class="star">*</span><br>
+                <input type="text" name="CurrentlyPursuing" id="CurrentlyPursuing" class="maxWidth">
+            </div><br>
+            <div>
+                Current educational institute name<span class="star">*</span><br>
+                <input type="text" name="CIName" id="CIName" class="maxWidth">
+            </div><br> 
+            <div>
+                Overall percentage<span class="star">*</span><br>
+                <input type="text" name="OverallPercentage" id="OverallPercentage" class="maxWidth" onfocusout="ValidatePercentage(document.myForm.OverallPercentage)" >
+            </div><br>
+            <div>
+                <label for="SSC-Board">Current backlogs if any</label><span class="star">*</span><br>
+                <select name="CurrentBacklogs" id="CurrentBacklogs" class="maxWidth">
+                    <option value="">Select from the options</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="More than 3">More than 3</option>
+                </select>
+            </div><br>
+            <div id="buttons">
+                <input type="button" value="Previous" onclick="goToPage1()">
+                <input type="button" value="Save" onclick="validateFormPage2()">
+                <input type="button" value="Next" onclick="goToPage3()">
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>

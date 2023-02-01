@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Registration form Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form id="regForm" method="post" name="myForm" action="">
+
+        <div id="form">
+            <div>
+                Name<span class="star">*</span><br>
+                <input type="text" name="First" id="First" class="First" placeholder="First">
+                <input type="text" name="Last" id="Last" class="Last" placeholder="Last">
+            </div><br>
+            <div>
+                Date of Birth<span class="star">*</span><br>
+                <input type="date" id="datefield" class="maxWidth" placeholder="MM/DD/YYYY">
+            </div><br>
+            <div>
+                Email<span class="star">*</span><br>
+                <input type="email" name="email" id="email" class="maxWidth">
+            </div><br>
+            <div>
+                Father's name<span class="star">*</span><br>
+                <input type="text" name="FFirst" id="FFirst" class="First" placeholder="First">
+                <input type="text" name="FLast" id="FLast" class="Last" placeholder="Last">
+            </div><br>
+            <div>
+                Mother's name<span class="star">*</span><br>
+                <input type="text" name="MFirst" id="MFirst" class="First" placeholder="First">
+                <input type="text" name="MLast" id="MLast" class="Last" placeholder="Last">
+            </div><br>
+            <div>
+                Gender<span class="star">*</span><br>
+                <input type="radio" name="Gender" id="Gender" value="Male"><label for="Male"> M</label><br>
+                <input type="radio" name="Gender" id="Gender" value="Female"> <label for="Female"> F</label> <br>
+            </div><br>
+            <div>
+                Nationality<span class="star">*</span><br>
+                <input type="text" name="Nationality" id="Nationality" class="maxWidth">
+            </div><br>
+            <div>
+                Home Address<span class="star">*</span><br>
+                <input type="text" name="HAddress" id="HAddress" class="maxWidth" placeholder="Street Address">
+                <input type="text" name="City" id="City" placeholder="City">
+                <input type="text" name="State" id="State" placeholder="State">
+                <input type="text" name="Country" id="Country" placeholder="Country">
+            </div><br>
+            <div>
+                Telephone-Home<span class="star">*</span><br>
+                <input type="text" name="THome" id="T-Home" class="maxWidth" placeholder="### ### ####" onfocusout="homePhoneNumber(document.myForm.THome)" >
+            </div><br>
+            <div>
+                Telephone-Mobile<span class="star">*</span><br>
+                <input type="text" name="TMobile" id="T-Mobile" class="maxWidth" placeholder="### ### ####">
+            </div><br>
+            <div id="buttons">
+                <input type="button" value="Save" onclick="homePhoneNumber(document.myForm.THome),mobilePhoneNumber(document.myForm.TMobile),validateFormPage1()">
+                <input type="button" value="Next" onclick="goToPage2()">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
